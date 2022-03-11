@@ -48,7 +48,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 ##
 
 🔰 **THANKS YOU TO**
-*   [Yansai](https://github.com/Yansai/Bdrl-Userbot) Bdrl-Userbot
+*   [Yansaii](https://github.com/Yansaii/Bdrl-Userbot) BdrlUserbot
 *   [Kyy](https://github.com/muhammadrizky16/Kyy-Userbot)   Kyy - Userbot
 *   [Alfa](https://github.com/CoeF) Alfa
 *   [Risman](https://github.com/mrismanaziz/Man-Userbot)   Suhu - Userbot
