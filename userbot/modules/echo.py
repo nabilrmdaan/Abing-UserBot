@@ -1,10 +1,10 @@
-# Thanks Sandy
-# Recode By Apis
-# fixes by : @pikyus1 / sendi
+# Thanks Kyy
+# Recode By Abing
+# fixes by : @sayaabing / Abing
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.events import register
-from userbot.utils import kyy_cmd
+from userbot.utils import bing_cmd
 from userbot.modules.sql_helper.echo_sql import (
     addecho,
     get_all_echos,
@@ -18,7 +18,7 @@ from userbot.utils import edit_delete, edit_or_reply
 from userbot.utils.events import get_user_from_event
 
 
-@kyy_cmd(pattern="addecho(?: |$)(.*)")
+@bing_cmd(pattern="addecho(?: |$)(.*)")
 async def echo(event):
     if event.reply_to_msg_id is None:
         return await event.edit("`Balas pesan Pengguna untuk menggemakan pesannya`")
@@ -53,7 +53,7 @@ async def echo(event):
         await edit_or_reply(roseevent, "Berhasil")
 
 
-@kyy_cmd(pattern="rmecho(?: |$)(.*)")
+@bing_cmd(pattern="rmecho(?: |$)(.*)")
 async def echo(event):
     if event.reply_to_msg_id is None:
         return await event.edit("Reply to a User's message to echo his messages")
@@ -71,7 +71,7 @@ async def echo(event):
         await event.edit("The user is not activated with echo")
 
 
-@kyy_cmd(pattern="delecho(?: |$)(.*)")
+@bing_cmd(pattern="delecho(?: |$)(.*)")
 async def echo(event):
     input_str = event.pattern_match.group(1)
     if input_str:
@@ -101,7 +101,7 @@ async def echo(event):
             await event.edit("Echo telah di hentikan.")
 
 
-@kyy_cmd(pattern="echolist(?: |$)(.*)")
+@bing_cmd(pattern="echolist(?: |$)(.*)")
 async def echo(event):  # sourcery no-metrics
     input_str = event.pattern_match.group(1)
     private_chats = ""
