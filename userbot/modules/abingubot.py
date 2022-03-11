@@ -1,14 +1,14 @@
-# Copyright (C) 2021 Kyy - Userbot
-# Created by Kyy
+# Copyright (C) 2021 Abing - Userbot
+# Created by Abing
 # Jangan hapus credit Anj!!!
 
 
 from time import sleep
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, bing_cmd
 
 
-@kyy_cmd(pattern="sadboy(?: |$)(.*)")
+@bing_cmd(pattern="sadboy(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -22,7 +22,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@kyy_cmd(pattern="lahk(?: |$)(.*)")
+@bing_cmd(pattern="lahk(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     xnxx = await edit_or_reply(typew, "`Lahk, Lo tolol?`")
@@ -34,7 +34,7 @@ async def typewriter(typew):
     await xnxx.edit("`Gua ga ketrigger sama bocah baru nyemplung!`")
 
 
-@kyy_cmd(pattern="sok(?: |$)(.*)")
+@bing_cmd(pattern="sok(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1.5)
@@ -49,7 +49,7 @@ async def typewriter(typew):
     await xnxx.edit("**GA KEREN LO BEGITU NGENTOT**")
 
 
-@kyy_cmd(pattern="wah(?: |$)(.*)")
+@bing_cmd(pattern="wah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     xnxx = await edit_or_reply(typew, "`Wahh, War nya keren bang`")
@@ -67,7 +67,7 @@ async def typewriter(typew):
     await xnxx.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
 
 
-@kyy_cmd(pattern="alay(?: |$)(.*)")
+@bing_cmd(pattern="alay(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -82,7 +82,7 @@ async def typewriter(typew):
     await xnxx.edit("pantes **NORAK**")
 
 
-@kyy_cmd(pattern="erpe(?: |$)(.*)")
+@bing_cmd(pattern="erpe(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -105,7 +105,7 @@ async def typewriter(typew):
     await xnxx.edit("Lari Ada Plastik KePanasan")
 
 
-@kyy_cmd(pattern="ange(?: |$)(.*)")
+@bing_cmd(pattern="ange(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     xnxx = await edit_or_reply(typew, "`Ayanggggg😖`")
@@ -115,7 +115,7 @@ async def typewriter(typew):
     await xnxx.edit("`Ayukkk Ewean Ayanggg🤤`")
 
 
-@kyy_cmd(pattern="virtual(?: |$)(.*)")
+@bing_cmd(pattern="virtual(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     xnxx = await edit_or_reply(typew, "**OOOO**")
@@ -137,7 +137,7 @@ async def typewriter(typew):
     await xnxx.edit("**KASIAN MANA MASIH MUDA**")
 
 
-@kyy_cmd(pattern="tittle(?: |$)(.*)")
+@bing_cmd(pattern="tittle(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     xnxx = await edit_or_reply(typew, "**OI ANAK TITLE**")
