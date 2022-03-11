@@ -694,7 +694,8 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@AbingUserbot"):
+            if event.query.user_id == uid and query.startswith(
+                    "@AbingUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=binglogo,
