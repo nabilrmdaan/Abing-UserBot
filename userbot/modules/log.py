@@ -14,7 +14,7 @@ from userbot.modules.vcg import vcmention
 from userbot.utils import _format, edit_delete, edit_or_reply
 from userbot.utils.tools import media_type
 
-from userbot.utils import kyy_cmd
+from userbot.utils import bing_cmd
 
 
 class LOG_CHATS:
@@ -29,27 +29,27 @@ LOG_CHATS_ = LOG_CHATS()
 
 @bot.on(events.ChatAction)
 async def logaddjoin(kyy):
-    user = await kyy.get_user()
-    chat = await kyy.get_chat()
+    user = await bing.get_user()
+    chat = await bing.get_chat()
     if not (user and user.is_self):
         return
     if hasattr(chat, "username") and chat.username:
-        chat = f"[{chat.title}](https://t.me/{chat.username}/{kyy.action_message.id})"
+        chat = f"[{chat.title}](https://t.me/{chat.username}/{bing.action_message.id})"
     else:
-        chat = f"[{chat.title}](https://t.me/c/{chat.id}/{kyy.action_message.id})"
-    if kyy.user_added:
-        tmp = kyy.added_by
+        chat = f"[{chat.title}](https://t.me/c/{chat.id}/{bing.action_message.id})"
+    if bing.user_added:
+        tmp = bing.added_by
         text = f"u📩 **#TAMBAH_LOG\n •** {vcmention(tmp)} **Menambahkan** {vcmention(user)}\n **• Ke Group** {chat}"
-    elif kyy.user_joined:
+    elif binh.user_joined:
         text = f"📨 **#LOG_GABUNG\n •** [{user.first_name}](tg://user?id={user.id}) **Bergabung\n • Ke Group** {chat}"
     else:
         return
-    await kyy.client.send_message(BOTLOG_CHATID, text)
+    await bing.client.send_message(BOTLOG_CHATID, text)
 
 
 @bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 @bot.on(events.MessageEdited(incoming=True, func=lambda e: e.is_private))
-async def monito_p_m_s(kyy):
+async def monito_p_m_s(bing):
     if BOTLOG_CHATID == -100:
         return
     if gvarstatus("PMLOG") and gvarstatus("PMLOG") == "false":
@@ -57,7 +57,7 @@ async def monito_p_m_s(kyy):
     sender = await kyy.get_sender()
     await asyncio.sleep(0.5)
     if not sender.bot:
-        chat = await kyy.get_chat()
+        chat = await bing.get_chat()
         if not no_log_pms_sql.is_approved(chat.id) and chat.id != 777000:
             if LOG_CHATS_.RECENT_USER != chat.id:
                 LOG_CHATS_.RECENT_USER = chat.id
@@ -69,14 +69,14 @@ async def monito_p_m_s(kyy):
                         )
                     )
                     LOG_CHATS_.COUNT = 0
-                LOG_CHATS_.NEWPM = await kyy.client.send_message(
+                LOG_CHATS_.NEWPM = await bing.client.send_message(
                     BOTLOG_CHATID,
                     f"**💌 #MENERUSKAN #PESAN_BARU**\n** • Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** • User ID:** `{chat.id}`",
                 )
             try:
-                if kyy.message:
-                    await kyy.client.forward_messages(
-                        BOTLOG_CHATID, kyy.message, silent=True
+                if bing.message:
+                    await bing.client.forward_messages(
+                        BOTLOG_CHATID, bing.message, silent=True
                     )
                 LOG_CHATS_.COUNT += 1
             except Exception as e:
@@ -122,7 +122,7 @@ async def log_tagged_messages(yahaha):
         )
 
 
-@kyy_cmd(pattern="save(?: |$)(.*)")
+@bing_cmd(pattern="save(?: |$)(.*)")
 async def log(log_text):
     if BOTLOG_CHATID:
         if log_text.reply_to_msg_id:
@@ -144,7 +144,7 @@ async def log(log_text):
         )
 
 
-@kyy_cmd(pattern="log$")
+@bing_cmd(pattern="log$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -155,7 +155,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@kyy_cmd(pattern="nolog$")
+@bing_cmd(pattern="nolog$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -166,7 +166,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@kyy_cmd(pattern="pmlog (on|off)$")
+@bing_cmd(pattern="pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -196,7 +196,7 @@ async def set_pmlog(event):
         await edit_or_reply(event, "**PM LOG Sudah Dimatikan**")
 
 
-@kyy_cmd(pattern="gruplog (on|off)$")
+@bing_cmd(pattern="gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
