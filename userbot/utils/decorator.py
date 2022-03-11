@@ -55,7 +55,7 @@ def bing_cmd(
         else:
             bing_ = "\\" + CMD_HANDLER
             sudo_ = "\\" + SUDO_HANDLER
-            bing_reg = re.compile(kyy_ + pattern)
+            bing_reg = re.compile(bing_ + pattern)
             sudo_reg = re.compile(sudo_ + pattern)
             if command is not None:
                 cmd1 = bing_ + command
