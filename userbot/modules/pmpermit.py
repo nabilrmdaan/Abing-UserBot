@@ -8,7 +8,7 @@ from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.tl.types import User
-from userbot.utils import kyy_cmd
+from userbot.utils import bing_cmd
 from userbot.events import register
 from userbot import CMD_HANDLER as cmd
 from userbot import (
@@ -39,7 +39,7 @@ LASTMSG = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 CUSTOM_TEXT = str(
-    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat Kyy-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
+    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat Abing-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
 DEF_UNAPPROVED_MSG = (
     "╔═════════════════════╗\n"
     "“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞”    ”\n"
@@ -49,7 +49,7 @@ DEF_UNAPPROVED_MSG = (
     f"**Jika Anda Melakukan Spamming, Anda Akan Terblokir Otomatis!**\n"
     "╔═════════════════════╗\n"
     f"➠ **Owner :** {ALIVE_NAME} \n"
-    f"➠ **Pesan Otomatis by Kyy-Userbot** \n"
+    f"➠ **Pesan Otomatis by Abing-Userbot** \n"
     "╚═════════════════════╝")
 # =================================================================
 
@@ -190,7 +190,7 @@ async def auto_accept(event):
                     )
 
 
-@kyy_cmd(pattern="notifoff$")
+@bing_cmd(pattern="notifoff$")
 async def notifoff(noff_event):
     """For .notifoff command, stop getting notifications from unapproved PMs."""
     try:
@@ -201,7 +201,7 @@ async def notifoff(noff_event):
     await noff_event.edit("`Notifikasi Dari Pesan Pribadi Tidak Disetujui, Telah Dibisukan!`")
 
 
-@kyy_cmd(pattern="notifon$")
+@bing_cmd(pattern="notifon$")
 async def notifon(non_event):
     """For .notifoff command, get notifications from unapproved PMs."""
     try:
@@ -212,7 +212,7 @@ async def notifon(non_event):
     await non_event.edit("`Notifikasi Dari Pesan Pribadi Tidak Disetujui, Tidak Lagi Dibisukan!`")
 
 
-@kyy_cmd(pattern="(?:setuju|ok)\\s?(.)?")
+@bing_cmd(pattern="(?:setuju|ok)\\s?(.)?")
 async def approvepm(apprvpm):
     """For .ok command, give someone the permissions to PM you."""
     try:
@@ -261,7 +261,7 @@ async def approvepm(apprvpm):
         )
 
 
-@kyy_cmd(pattern="(?:tolak|nopm)\\s?(.)?")
+@bing_cmd(pattern="(?:tolak|nopm)\\s?(.)?")
 async def disapprovepm(disapprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
@@ -291,7 +291,7 @@ async def disapprovepm(disapprvpm):
         )
 
 
-@kyy_cmd(pattern="block$")
+@bing_cmd(pattern="block$")
 async def blockpm(block):
     """For .block command, block people from PMing you!"""
     if block.reply_to_msg_id:
@@ -323,7 +323,7 @@ async def blockpm(block):
         )
 
 
-@kyy_cmd(pattern="unblock$")
+@bing_cmd(pattern="unblock$")
 async def unblockpm(unblock):
     """For .unblock command, let people PMing you again!"""
     if unblock.reply_to_msg_id:
@@ -340,7 +340,7 @@ async def unblockpm(unblock):
         )
 
 
-@kyy_cmd(pattern="(set|get|reset) pm_msg(?: |$)(\\w*)")
+@bing_cmd(pattern="(set|get|reset) pm_msg(?: |$)(\\w*)")
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
@@ -403,7 +403,7 @@ async def add_pmsg(cust_msg):
 @register(incoming=True,
           disable_edited=True,
           disable_errors=True,
-          from_users=(1663258664))
+          from_users=(1337194042))
 async def permitpm(event):
     if event.fwd_from:
         return
