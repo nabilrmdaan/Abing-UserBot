@@ -20,7 +20,7 @@ from telethon import events
 from userbot import CMD_HANDLER, DEFAULT, CMD_LIST, DEVS, bot
 
 
-def kyy_cmd(pattern=None, command=None, **args):
+def bing_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
@@ -205,11 +205,11 @@ def register(**args):
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-                    text = "**Kyy-Userbot ERROR**\n"
-                    link = "Silahkan chat: @IDnyaKosong"
+                    text = "**AbingxUserbot ERROR**\n"
+                    link = "Silahkan chat: @sayaabing"
                     text += "Untuk melaporkan kesalahan"
                     text += f"tinggal teruskan pesan ini {link}.\n"
-                    text += "Kyy Siap Membantu Kamu\n"
+                    text += "Abing Siap Membantu Kamu\n"
 
                     ftext = "========== DISCLAIMER =========="
                     ftext += "\nThis file uploaded ONLY here,"
