@@ -31,7 +31,7 @@ pacar = [
     "**Uuyy Bang**",
     "**Hadir Uyy** 😁",
     "**Saya Hadir Untuk Melindungi Cewe Dari Laki Laki Sangean** 😎",
-    "**Saya Hadir Untuk Membasmi Para Vcs Vcs Sampah** 😡", 
+    "**Saya Hadir Untuk Membasmi Para Vcs Vcs Sampah** 😡",
 ]
 
 
