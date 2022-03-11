@@ -32,7 +32,7 @@ try:
     abingblacklist = requests.get(
         "https://raw.githubusercontent.com/nabilrmdaan/Abingblack/master/abingblacklist.json"
     ).json()
-    if user.id in kyyblacklist:
+    if user.id in bingblacklist:
         LOGS.warning(
             "MAKANYA GA USAH BERTINGKAH KONTOL, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE ORANG KEK LU.\nCredits: @sayaabing"
         )
