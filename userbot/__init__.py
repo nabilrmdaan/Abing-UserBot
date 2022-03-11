@@ -184,7 +184,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/nabilrmdaan/AbingxUserbot")
+    "https://github.com/nabilrmdaan/Abing-Userbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Abing")
 
@@ -259,7 +259,7 @@ YOUTUBE_API_KEY = os.environ.get(
 # Untuk Perintah .abingalive
 ABING_TEKS_KUSTOM = os.environ.get(
     "ABING_TEKS_KUSTOM",
-    "I'am Using AbingxUserbot⚡")
+    "I'am Using Abing-Userbot⚡")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -304,7 +304,7 @@ INLINE_PIC = os.environ.get(
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "⚡"
 
-# °AbingxUserbot°
+# °Abing-Userbot°
 OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/sayaabing"
 
 DEFAULT = list(map(int, b64decode("MTY2MzI1ODY2NA==").split()))
@@ -420,7 +420,7 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "Kyy-Userbot"
+    session = "Abing-Userbot"
 try:
     bot = TelegramClient(
         session=session,
@@ -495,7 +495,7 @@ with bot:
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**AbingxUserbot v{BOT_VER} is back up and running!**\n\n"
+        f"**Abing-Userbot v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {DEFAULTUSER}"
@@ -595,7 +595,7 @@ with bot:
         uid = user.id
         owner = user.first_name
         logo = ALIVE_LOGO
-        kyylogo = INLINE_PIC
+        binglogo = INLINE_PIC
         tgbotusername = BOT_USERNAME
         BTN_URL_REGEX = re.compile(
             r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)"
@@ -607,7 +607,7 @@ with bot:
                 current_page_number = int(looters)
                 buttons = paginate_help(
                     current_page_number, dugmeler, "helpme")
-                text = f"**⚡ ᴀʙɪɴɢxυѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**⚡ ᴀʙɪɴɢ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=binglogo,
@@ -694,25 +694,25 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@KyyUserbot"):
+            if event.query.user_id == uid and query.startswith("@AbingUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=binglogo,
                     link_preview=False,
-                    text=f"**⚡ ᴀʙɪɴɢxυѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
+                    text=f"**⚡ ᴀʙɪɴɢ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Abing x Userbot",
+                    description="Repository Abing - Userbot",
                     url="https://t.me/AbingSupport",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**AbingxUserbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [Abing-Ex](https://t.me/sayaabing)\n✣ **sᴜᴘᴘᴏʀᴛ :** @AbingSupport\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [AbingxUserbot](https://github.com/nabilrmdaan/AbingxUserbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Abing-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [Abing-Ex](https://t.me/sayaabing)\n✣ **sᴜᴘᴘᴏʀᴛ :** @AbingSupport\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Abing-Userbot](https://github.com/nabilrmdaan/Abing-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -759,15 +759,15 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="⚡ ᴀʙɪɴɢxυѕєявσт ⚡",
-                    description="Abing x Userbot | Telethon",
+                    title="⚡ ᴀʙɪɴɢ-υѕєявσт ⚡",
+                    description="Abing - Userbot | Telethon",
                     url="https://t.me/AbingProject",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**AbingxUserbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @AbingProject\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Abing-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @AbingProject\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -775,7 +775,7 @@ with bot:
                                 "https://t.me/AbingSupport"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/nabilrmdaan/AbingxUserbot"),
+                                "https://github.com/nabilrmdaan/Abing-Userbot"),
                         ],
                     ],
                     link_preview=False,
