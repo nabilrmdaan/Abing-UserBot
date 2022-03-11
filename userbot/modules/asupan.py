@@ -4,19 +4,19 @@
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import kyy_cmd
+from userbot.utils import bing_cmd
 import random
 from userbot import owner
 from telethon.tl.types import InputMessagesFilterVideo
 
 
-@kyy_cmd(pattern="asupan$")
+@bing_cmd(pattern="asupan$")
 async def _(event):
     try:
         asupannya = [
             asupan
             async for asupan in event.client.iter_messages(
-                "@AsupanKyyUserbot", filter=InputMessagesFilterVideo
+                "@AsupanAbingUserbot", filter=InputMessagesFilterVideo
             )
         ]
         aing = await event.client.get_me()
