@@ -18,8 +18,8 @@ import sys
 import time
 from datetime import datetime
 import psutil
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, KYY_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, BING_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot, CMD_HANDLER as cmd
+from userbot.utils import edit_or_reply, bing_cmd
 
 
 # ================= CONSTANT =================
@@ -58,7 +58,7 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@kyy_cmd(pattern="spc")
+@bing_cmd(pattern="spc")
 async def psu(event):
     uname = platform.uname()
     softw = "**Informasi Sistem**\n"
@@ -116,7 +116,7 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 
-@kyy_cmd(pattern="sysd$")
+@bing_cmd(pattern="sysd$")
 async def sysdetails(sysd):
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
         try:
@@ -136,7 +136,7 @@ async def sysdetails(sysd):
             await sysd.edit("`Install neofetch first !!`")
 
 
-@kyy_cmd(pattern="botver$")
+@bing_cmd(pattern="botver$")
 async def bot_ver(event):
     if event.text[0].isalpha() or event.text[0] in ("/", "#", "@", "!"):
         return
@@ -164,8 +164,8 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**✨Kyy-Userbot✨ Versi:** \n "
-            f"heads/Kyy-Userbot-0-x634i7u1"
+            "**⚜-**⚡Abing-Userbot⚡ Versi:** \n "
+            f"heads/Abing-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
@@ -175,7 +175,7 @@ async def bot_ver(event):
         )
 
 
-@kyy_cmd(pattern="pip(?: |$)(.*)")
+@bing_cmd(pattern="pip(?: |$)(.*)")
 async def pipcheck(pip):
     if pip.text[0].isalpha() or pip.text[0] in ("/", "#", "@", "!"):
         return
@@ -223,13 +223,13 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@kyy_cmd(pattern="(?:kyyalive)\\s?(.)?")
+@bing_cmd(pattern="(?:abingalive)\\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f" **✨ҡʏʏ-υѕєявσт✨** \n\n"
-        f"\n__**{KYY_TEKS_KUSTOM}**__\n\n\n"
+        f" **⚡ᴀʙɪɴɢ-υѕєявσ⚡** \n\n"
+        f"\n__**{ABING_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"◙ `Name       :` {DEFAULTUSER} \n"
         f"◙ `Username   :` @{user.username} \n"
@@ -238,7 +238,7 @@ async def amireallyalive(alive):
         f"◙ `Bot Ver    :` {BOT_VER} \n"
         f"◙ `Modules    :` {len(modules)} \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/NastySupportt) | [ᴄʜᴀɴɴᴇʟ](https://t.me/NastyProject) | [ᴏᴡɴᴇʀ](https://t.me/IDnyaKosong) | [ɢɪᴛʜᴜʙ](https://github.com/muhammadrizky16/Kyy-Userbot)")
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/AbingSupport) | [ᴄʜᴀɴɴᴇʟ](https://t.me/AbingProject) | [ᴏᴡɴᴇʀ](https://t.me/sayaabing) | [ɢɪᴛʜᴜʙ](https://github.com/nabilrmdaan/Abing-Userbot)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -259,13 +259,13 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@kyy_cmd(pattern="(?:kyyon)\\s?(.)?")
+@bing_cmd(pattern="(?:abingon)\\s?(.)?")
 async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬● \n"
-        f"✾ 🤴 • `ᴏᴡɴᴇʀ    :`[Kyy](t.me/IDnyaKosong) \n"
+        f"✾ 🤴 • `ᴏᴡɴᴇʀ    :`[Abing](t.me/sayaabing) \n"
         f"✾ 🖥️ • `ꜱʏꜱᴛᴇᴍ   :`Ubuntu 20.10 \n"
         f"✾ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ :`v.{version.__version__} \n"
         f"✾ 🐍 • `ᴘʏᴛʜᴏɴ   :`v.{python_version()} \n"
@@ -292,7 +292,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@kyy_cmd(pattern="(?:alive|on)\\s?(.)?")
+@bing_cmd(pattern="(?:alive|on)\\s?(.)?")
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -303,10 +303,10 @@ async def redis(alive):
     await xx.edit("__Sedang Memuat...__")
     await xx.edit("__Sedang Memuat..__")
     await xx.edit("__Sedang Memuat...__")
-    await xx.edit("✨")
+    await xx.edit("⚡")
     await asyncio.sleep(2)
     output = (
-        f"┏━━━━✨ҡʏʏ-υѕєявσт✨━━━━ \n"
+        f"┏━━━━⚡ᴀʙɪɴɢ-υѕєявσт⚡━━━━ \n"
         f"┣  **Name     :** {DEFAULTUSER} \n"
         f"┣  **Username :** @{user.username} \n"
         f"┣  **Telethon :** Ver {version.__version__} \n"
@@ -314,9 +314,9 @@ async def redis(alive):
         f"┣  **Branch   :** {UPSTREAM_REPO_BRANCH} \n"
         f"┣  **Bot Ver  :** {BOT_VER} \n"
         f"┣  **Modules  :** {len(modules)} Modules \n"
-        f"┣  **GitHub   :** [Kyy](https://github.com/muhammadrizky16/Kyy-Userbot) \n"
-        f"┣  **Support  :** [Groups](https://t.me/NastySupportt) \n"
-        f"┣  **Owner    :** [Kyy](https://t.me/IDnyaKosong) \n"
+        f"┣  **GitHub   :** [Abing](https://github.com/nabilrmdaan/Abing-Userbot) \n"
+        f"┣  **Support  :** [Groups](https://t.me/AbingSupport) \n"
+        f"┣  **Owner    :** [Abing](https://t.me/sayaabing) \n"
         f"┗━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
@@ -338,7 +338,7 @@ async def redis(alive):
         await xx.delete()
 
 
-@kyy_cmd(pattern="aliveu")
+@bing_cmd(pattern="aliveu")
 async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
@@ -351,7 +351,7 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
 
 
-@kyy_cmd(pattern="resetalive$")
+@bing_cmd(pattern="resetalive$")
 async def amireallyalivereset(ureset):
     global DEFAULTUSER  # global statement
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
