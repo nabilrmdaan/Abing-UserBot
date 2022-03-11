@@ -1,7 +1,7 @@
 # Credits: @mrismanaziz
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
-# Ported By @IDnyaKosong
+# Ported By @sayaabing
 
 import asyncio
 import importlib
@@ -44,7 +44,7 @@ async def autobot():
     if who.username:
         username = who.username + "_ubot"
     else:
-        username = "kyy" + (str(who.id))[5:] + "ubot"
+        username = "bing" + (str(who.id))[5:] + "ubot"
     bf = "@BotFather"
     await bot(UnblockRequest(bf))
     await bot.send_message(bf, "/cancel")
@@ -77,7 +77,7 @@ async def autobot():
     await bot.send_read_acknowledge("botfather")
     if isdone.startswith("Sorry,"):
         ran = randint(1, 100)
-        username = "kyy" + (str(who.id))[6:] + str(ran) + "ubot"
+        username = "bing" + (str(who.id))[6:] + str(ran) + "ubot"
         await bot.send_message(bf, username)
         await asyncio.sleep(1)
         nowdone = (await bot.get_messages(bf, limit=1))[0].text
@@ -106,7 +106,7 @@ async def autobot():
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @NastyProject ✨"
+                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @AbingProject ✨"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -148,7 +148,7 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @NastyProject ✨"
+            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @AbingProject ✨"
         )
         await bot.send_message(
             BOTLOG_CHATID,
