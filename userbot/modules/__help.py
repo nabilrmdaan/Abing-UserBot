@@ -20,7 +20,7 @@
 
 
 from userbot import BOT_USERNAME, CMD_HELP, bot
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_delete, edit_or_reply
 
 user = bot.get_me()
 DEFAULTUSER = user.first_name
