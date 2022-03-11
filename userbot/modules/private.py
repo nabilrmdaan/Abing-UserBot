@@ -503,7 +503,7 @@ async def bot_start(event):
             start_msg = f"**Users**: {mention}\
                         \n\n**Bot**: [{OWNER}](tg://user?id={OWNER_ID}) \
                         \n**Forward**: True\
-                        \n\n**Powered by**: [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)"
+                        \n\n**Powered by**: [Abing-Userbot](https://github.com/nabilrmdaan/Abing-Userbot)"
             buttons = [
                 (
                     Button.inline("ɪɴꜰᴏ", data="infor"),
@@ -562,7 +562,7 @@ async def _(event):
 async def infor(event):
     await tgbot.send_message(
         event.chat_id,
-        message=f"**Groups**: [sᴜᴘᴘᴏʀᴛ](t.me/NastySupportt)\n**Github**: [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)\n**Deploy**: [Heroku](https://dashboard.heroku.com/new?template=https://github.com/muhammadrizky16/templat-userbot2)",
+        message=f"**Groups**: [sᴜᴘᴘᴏʀᴛ](t.me/AbingSupport)\n**Github**: [Abing-Userbot](https://github.com/nabilrmdaan/Abing-Userbot)\n**Deploy**: [Heroku](https://dashboard.heroku.com/new?template=https://github.com/nabilrmdaan/Abing-Userbot)",
         buttons=[
             [
                 custom.Button.inline(
