@@ -205,7 +205,7 @@ def register(**args):
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-                    text = "**AbingxUserbot ERROR**\n"
+                    text = "**Abing-Userbot ERROR**\n"
                     link = "Silahkan chat: @sayaabing"
                     text += "Untuk melaporkan kesalahan"
                     text += f"tinggal teruskan pesan ini {link}.\n"
