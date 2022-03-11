@@ -1,5 +1,5 @@
 {
-  "name": "AbingxUserbot",
+  "name": "Abing-Userbot",
   "description": "USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/a7915ed28a022aa9125a6.jpg",
   "keywords": [
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/nabilrmdaan/AbingxUserbot/AbingxUserbot",
+  "repository": "https://github.com/nabilrmdaan/Abing-Userbot/Abing-Userbot",
   "telegram": "https://t.me/sayaabing",
   "success_url": "https://t.me/AbingProject",
   "stack": "container",
